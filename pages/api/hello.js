@@ -2,9 +2,9 @@ import PayU from "payu-websdk";
 
 export default function handler(req, res) {
   const payuClient = new PayU({
-    key: "ZFAg4P",
-    salt: "JVpK0UOyYYTFelnslegrx752GqMYVjxT",
-  }, "PROD");     // Possible value  = TEST/LIVE
+    key: "<MERCHANT_KEY>",
+    salt: "<MERCHANT_SALT>",
+  }, "PROD");     // Possible value  = TEST/PROD
 
   let data = payuClient.paymentInitiate({
     txnid: Date.now().toString(),
